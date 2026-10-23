@@ -79,6 +79,22 @@ function updateCssCode() {
         `border-radius: ${radius};\n` +
         `min-width: ${minWidth.value}px;\n` +
         `overflow: ${overflow.value};`;
+
+    const highlightedCode = document.querySelector('#css-highlight');
+    highlightedCode.replaceChildren();
+
+    cssCode.value.split('\n').forEach(function (line, index) {
+        const separator = line.indexOf(':');
+        const value = document.createElement('span');
+        value.className = 'css-value';
+        value.textContent = line.slice(separator + 1, -1);
+
+        if (index > 0) {
+            highlightedCode.append('\n');
+        }
+
+        highlightedCode.append(line.slice(0, separator + 1), value, ';');
+    });
 }
 
 // Завдання 5

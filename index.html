@@ -25,86 +25,82 @@
         </button>
       </div>
 
-      <div class="workspace">
-        <div class="settings-panel">
-          <div class="tab-content active" data-content="radius">
-            <h2>Border Radius</h2>
+      <div class="tab-content active" data-content="radius">
+        <h2>Border Radius</h2>
 
-            <div class="control">
-              <label for="top-left">Top Left</label>
-              <input id="top-left" type="range" min="0" max="100" value="0">
-              <span id="top-left-value">0 px</span>
-            </div>
-
-            <div class="control">
-              <label for="top-right">Top Right</label>
-              <input id="top-right" type="range" min="0" max="100" value="0">
-              <span id="top-right-value">0 px</span>
-            </div>
-
-            <div class="control">
-              <label for="bottom-right">Bottom Right</label>
-              <input id="bottom-right" type="range" min="0" max="100" value="0">
-              <span id="bottom-right-value">0 px</span>
-            </div>
-
-            <div class="control">
-              <label for="bottom-left">Bottom Left</label>
-              <input id="bottom-left" type="range" min="0" max="100" value="0">
-              <span id="bottom-left-value">0 px</span>
-            </div>
-          </div>
-
-          <div class="tab-content" data-content="min-width">
-            <h2>Min Width</h2>
-            <div id="min-width-controls">
-              <div class="control">
-                <label for="min-width">Min Width</label>
-                <input id="min-width" type="range" min="0" max="500" value="0">
-                <span id="min-width-value">0 px</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" data-content="overflow">
-            <h2>Overflow</h2>
-            <div id="overflow-controls">
-              <div class="control">
-                <label for="overflow">Overflow</label>
-                <select id="overflow">
-                  <option value="visible">visible</option>
-                  <option value="hidden">hidden</option>
-                  <option value="scroll">scroll</option>
-                  <option value="auto">auto</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
+        <div class="control">
+          <label for="top-left">Top Left</label>
+          <input id="top-left" type="range" min="0" max="100" value="0">
+          <span id="top-left-value">0 px</span>
         </div>
-        <div class="output-panel">
-          <section class="preview-section">
-            <h2>Preview</h2>
-            <div class="preview-stage">
-              <div id="preview" class="preview">
-                <span>Preview</span>
-                <button id="preview-button" type="button">Click</button>
-              </div>
-            </div>
-            <p id="coordinates">X: 0; Y: 0</p>
-          </section>
 
-          <section class="result">
-            <h2>CSS Code</h2>
-            <div class="code-window">
-              <textarea id="css-code" rows="6" readonly aria-label="Згенерований CSS-код"></textarea>
-              <button id="copy-button" type="button">Скопіювати CSS</button>
-            </div>
-            <p id="copy-message"></p>
-          </section>
+        <div class="control">
+          <label for="top-right">Top Right</label>
+          <input id="top-right" type="range" min="0" max="100" value="0">
+          <span id="top-right-value">0 px</span>
+        </div>
 
+        <div class="control">
+          <label for="bottom-right">Bottom Right</label>
+          <input id="bottom-right" type="range" min="0" max="100" value="0">
+          <span id="bottom-right-value">0 px</span>
+        </div>
+
+        <div class="control">
+          <label for="bottom-left">Bottom Left</label>
+          <input id="bottom-left" type="range" min="0" max="100" value="0">
+          <span id="bottom-left-value">0 px</span>
         </div>
       </div>
+
+      <div class="tab-content" data-content="min-width">
+        <h2>Min Width</h2>
+        <div id="min-width-controls">
+          <div class="control">
+            <label for="min-width">Min Width</label>
+            <input id="min-width" type="range" min="0" max="500" value="0">
+            <span id="min-width-value">0 px</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-content="overflow">
+        <h2>Overflow</h2>
+        <div id="overflow-controls">
+          <div class="control">
+            <label for="overflow">Overflow</label>
+            <select id="overflow">
+              <option value="visible">visible</option>
+              <option value="hidden">hidden</option>
+              <option value="scroll">scroll</option>
+              <option value="auto">auto</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <section class="preview-section">
+        <h2>Preview</h2>
+
+        <div id="preview" class="preview">
+          <span>Preview</span>
+          <button id="preview-button" type="button">Click</button>
+        </div>
+
+        <p id="coordinates">X: 0; Y: 0</p>
+      </section>
+
+      <section class="result">
+        <h2>CSS Code</h2>
+
+        <div class="code-window">
+          <textarea id="css-code" rows="6" readonly hidden></textarea>
+          <pre id="css-highlight" tabindex="0" aria-label="Згенерований CSS-код"></pre>
+          <button id="copy-button" type="button" title="Скопіювати CSS" aria-label="Скопіювати CSS"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="7" width="12" height="15" rx="2"/><path d="M16 7V4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/></svg></button>
+        </div>
+
+        <p id="copy-message"></p>
+      </section>
 
       <form id="preset-form">
         <h2>Збереження пресета</h2>
